@@ -40,3 +40,6 @@ def shutdown():
     shutdown_server()
     return "Server shutting down..."
 
+
+if __name__ == "__main__":
+    app.run(debug=True, port=5000, host="localhost")
