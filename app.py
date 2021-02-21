@@ -14,9 +14,9 @@ def readme():
 
 @app.route("/host")
 def hostname():
-    host = socket.gethostname()
-    host2 = socket.gethostbyname(host)
-    return " <center><b><p style='font-family:Tahoma';>Host Name:  </b>" + host + "<center><b><p style='font-family:Tahoma';>Host IP:  </b>" + host2
+    host1 = socket.gethostname()
+    host2 = socket.gethostbyname(host1)
+    return " <center><b><p style='font-family:Tahoma';>Host Name:  </b>" + host1 + "<center><b><p style='font-family:Tahoma';>Host IP:  </b>" + host2
 
 
 
