@@ -38,7 +38,7 @@ def shutdown_server():
 @app.route('/stop')
 def shutdown():
     shutdown_server()
-    return "Server shutting down..."
+    return "<center><b><p style='font-family:Tahoma;color:red;font-size: 15px'>Server Shutting Down....  </b>"
 
 
 if __name__ == "__main__":
