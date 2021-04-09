@@ -1,9 +1,12 @@
-from flask import Flask
+from flask import Flask, render_template
 from flask import request
 import socket
 
 app = Flask(__name__)
 
+@app.route('/')
+def index():
+    return render_template('index.html')
 
 @app.route('/about')
 def about():
@@ -11,14 +14,6 @@ def about():
                The following Flask app will get a Docker Container Host name and Host IP.<br/>
                In Order to run this flask app in a stand alone mode run app.py using 'python -m flask run' command.<br/>
                </center></b></p>"""
-
-
-@app.route('/')
-def readme():
-    return """ <center><b><p style="font-family:Tahoma;color:red;font-size: 15px">Welcome to my first flask app!<br/>
-               You can check the host name and IP by going into /host<br/>
-               In order to stop the server you can shut it down by entering /stop<br/>
-               For more info head into /about</center><br/></b></p>"""
 
 
 @app.route("/host")
